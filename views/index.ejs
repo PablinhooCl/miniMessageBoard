@@ -1,0 +1,16 @@
+<h1><%= title %></h1>
+<p>Welcome to <%= title %></p>
+<% messages.forEach(function(message) { %>
+  <div>
+    <p>User: <%= message.username %></p>
+    <p>Text: <%= message.message %></p>
+    <p>Date: <%= message.added %></p>
+  </div>
+<% }); %>
+<button onclick="redirectToNew()">new message</button>
+<script>
+  function redirectToNew() {
+    // Redireccionar al hacer clic en el botón
+    window.location.href = '/new';
+  }
+</script>
